@@ -29,11 +29,11 @@ public class Note {
     private LocalDateTime createdAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "entityTypeid",insertable = false,updatable = false)
+    @JoinColumn(name = "entityTypeid",insertable = false, updatable = false)
     private ApplicationEntity entityType;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId",insertable = false,updatable = false)
+    @JoinColumn(name = "userId", insertable = false,updatable = false)
     private User user;
 
 

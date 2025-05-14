@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;

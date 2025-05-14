@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class CostCenterStatus {
 
     @Id
-    @Column(name = "statusccId")
+    @Column(name = "statusId")
     private Integer id;
 
     @Column(name = "description", length = 100)

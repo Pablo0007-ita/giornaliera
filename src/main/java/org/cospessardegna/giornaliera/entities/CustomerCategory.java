@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.*;
 
@@ -35,7 +35,7 @@ public class CostCenter {
     private Date creationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "statusId",nullable = false)
+    @JoinColumn(name = "statusId",insertable=false, updatable=false)
     private CostCenterStatus status;
 
 

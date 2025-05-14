@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.*;
 
@@ -21,15 +21,15 @@ public class AuthorizationRole {
     private Integer permissionId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "roleId", nullable = false)
+    @JoinColumn(name = "roleId", insertable=false, updatable=false)
     private Role role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "permissionId", nullable = false)
+    @JoinColumn(name = "permissionId", insertable=false, updatable=false)
     private Permission permission;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "app_entityId", nullable = false)
+    @JoinColumn(name = "app_entityId", insertable=false, updatable=false)
     private ApplicationEntity appEntity;
 }
 

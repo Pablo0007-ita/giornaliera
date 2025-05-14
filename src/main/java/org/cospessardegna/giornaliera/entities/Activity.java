@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import com.fasterxml.jackson.databind.ser.std.StdKeySerializers;
 import jakarta.persistence.*;
@@ -14,7 +14,7 @@ public class Activity {
     @GeneratedValue(strategy  = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "descriptiom", nullable = false, length = 500)
+    @Column(name = "descriptiom", nullable = false, length = 100)
     private String description;
 
     @Column(name = "dateTimeStart", nullable = false)
@@ -35,15 +35,15 @@ public class Activity {
     private Boolean readOnly;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "costCenterId", nullable = false)
+    @JoinColumn(name = "costCenterId", insertable=false, updatable=false)
     private CostCenter costCenter;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "typeId", nullable = false)
+    @JoinColumn(name = "typeId",  insertable=false, updatable=false)
     private ActivityType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "statusId", nullable = false)
+    @JoinColumn(name = "statusId",  insertable=false, updatable=false)
     private ActivityStatus status;
 }
 

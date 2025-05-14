@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.*;
 
@@ -16,11 +16,11 @@ public class ShiftUser {
     private Integer userId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "shiftId",nullable = false)
+    @JoinColumn(name = "shiftId",insertable=false, updatable=false)
     private Shift shift;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId",nullable = false)
+    @JoinColumn(name = "userId",insertable=false, updatable=false)
     private User user;
 
 }
