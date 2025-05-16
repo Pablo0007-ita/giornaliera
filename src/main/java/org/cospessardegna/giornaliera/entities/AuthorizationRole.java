@@ -4,32 +4,32 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "authorizationRole")
+@Table(name = "authorization_role")
 @IdClass(AuthorizationRoleid.class)
 public class AuthorizationRole {
 
     @Id
-    @Column(name = "roleId")
-    private Integer id;
+    @Column(name = "role_id")
+    private Integer roleId;
 
     @Id
-    @Column(name = "app_entityId", nullable = false)
+    @Column(name = "app_entity_id", nullable = false)
     private int appEntityId;
 
     @Id
-    @Column(name = "app_entityId", nullable = false)
+    @Column(name = "app_entity_id", nullable = false)
     private Integer permissionId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "roleId", insertable=false, updatable=false)
+    @JoinColumn(name = "role_id", insertable=false, updatable=false)
     private Role role;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "permissionId", insertable=false, updatable=false)
+    @JoinColumn(name = "permission_id", insertable=false, updatable=false)
     private Permission permission;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "app_entityId", insertable=false, updatable=false)
+    @JoinColumn(name = "app_entity_id", insertable=false, updatable=false)
     private ApplicationEntity appEntity;
 }
 

@@ -1,4 +1,4 @@
-package org.cospessardegna.Giornaliera.entities;
+package org.cospessardegna.giornaliera.entities;
 
 import jakarta.persistence.*;
 
@@ -13,27 +13,27 @@ public class Note {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "entityid",nullable = false)
+    @Column(name = "entity_id",nullable = false)
     private Integer entityId;
 
-    @Column(name = "entitytypeid", nullable = false)
+    @Column(name = "entity_type_id", nullable = false)
     private Integer entityTypeId;
 
-    @Column(name = "userId",nullable = false)
+    @Column(name = "user_id",nullable = false)
     private Integer userId;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name = "createdAt",nullable = false)
+    @Column(name = "created_at",nullable = false)
     private LocalDateTime createdAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "entityTypeid",insertable = false, updatable = false)
+    @JoinColumn(name = "entity_type_id",insertable = false, updatable = false)
     private ApplicationEntity entityType;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", insertable = false,updatable = false)
+    @JoinColumn(name = "user_id", insertable = false,updatable = false)
     private User user;
 
 

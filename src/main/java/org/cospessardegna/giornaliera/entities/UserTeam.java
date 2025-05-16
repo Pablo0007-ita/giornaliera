@@ -3,24 +3,24 @@ package org.cospessardegna.giornaliera.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "userTeam")
+@Table(name = "user_team")
 @IdClass(UserTeamId.class)
 public class UserTeam {
 
     @Id
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private Integer userId;
 
     @Id
-    @Column(name = "teamId")
+    @Column(name = "team_id")
     private Integer teamId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "teamId",insertable = false,updatable = false)
+    @JoinColumn(name = "team_id",insertable = false,updatable = false)
     private Team team;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId",insertable = false,updatable = false)
+    @JoinColumn(name = "user_id",insertable = false,updatable = false)
     private User user;
 }
 

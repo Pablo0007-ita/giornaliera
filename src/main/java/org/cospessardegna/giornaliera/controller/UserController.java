@@ -1,7 +1,7 @@
-package org.cospessardegna.Giornaliera.controller;
+package org.cospessardegna.giornaliera.controller;
 
-import org.cospessardegna.Giornaliera.entities.User;
-import org.cospessardegna.Giornaliera.service.UserService;
+import org.cospessardegna.giornaliera.entities.User;
+import org.cospessardegna.giornaliera.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,10 +21,12 @@ public class UserController {
     }
     @GetMapping("/{id}")
     public User getById(@PathVariable Integer id){
-        return userService.findById(id).orElseThrow();
-    }
+        return userService.findById(id).orElseThrow();}
     @PostMapping
     public User create(@RequestBody User user){
+        User tmp= user;
+        System.out.println(""+tmp);
+
         return userService.save(user);
     }
     @DeleteMapping("/{id}")

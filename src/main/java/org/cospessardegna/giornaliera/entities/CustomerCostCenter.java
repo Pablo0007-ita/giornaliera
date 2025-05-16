@@ -3,7 +3,7 @@ package org.cospessardegna.giornaliera.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "customerCostCenter")
+@Table(name = "customer_cost_center")
 @IdClass(CustomerCostCenterId.class)
 public class CustomerCostCenter {
 
@@ -16,11 +16,11 @@ public class CustomerCostCenter {
     private Integer customerId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "costCenterId",insertable = false, updatable = false)
+    @JoinColumn(name = "cost_center_id",insertable = false, updatable = false)
     private CostCenter costCenter;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customerId", insertable = false,updatable = false)
+    @JoinColumn(name = "customer_id", insertable = false,updatable = false)
     private Customer customer;
 
 }

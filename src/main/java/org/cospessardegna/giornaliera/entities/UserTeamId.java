@@ -6,15 +6,15 @@ import java.util.Objects;
 
 public class UserTeamId implements Serializable {
 
-    private Integer team;
-    private Integer user;
+    private Integer teamId;
+    private Integer userId;
 
     public UserTeamId() {
     }
 
     public UserTeamId(Integer team, Integer user) {
-        this.team = team;
-        this.user =user;
+        this.teamId = team;
+        this.userId =user;
 
     }
 
@@ -25,12 +25,12 @@ public class UserTeamId implements Serializable {
 
         UserTeamId that = (UserTeamId) o;
 
-        return Objects.equals(team, that.team)
-                && Objects.equals(user, that.user);
+        return Objects.equals(teamId, that.teamId)
+                && Objects.equals(userId, that.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(team, user);
+        return Objects.hash(teamId, userId);
     }
 }

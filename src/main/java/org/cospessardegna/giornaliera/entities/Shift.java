@@ -13,10 +13,10 @@ public class Shift {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "startDateTime",nullable = false)
+    @Column(name = "start_date_time",nullable = false)
     private LocalDateTime startDateTime;
 
-    @Column(name = "endDateTime",nullable = false)
+    @Column(name = "end_date_time",nullable = false)
     private LocalDateTime endDateTime;
 }
 

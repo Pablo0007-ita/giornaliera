@@ -1,8 +1,8 @@
-package org.cospessardegna.Giornaliera.service;
-import org.cospessardegna.Giornaliera.service.UserService;
-import org.cospessardegna.Giornaliera.entities.User;
+package org.cospessardegna.giornaliera.service;
+import org.cospessardegna.giornaliera.service.UserService;
+import org.cospessardegna.giornaliera.entities.User;
 import org.springframework.stereotype.Service;
-import org.cospessardegna.Giornaliera.repository.UserRepository;
+import org.cospessardegna.giornaliera.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;

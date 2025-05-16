@@ -12,36 +12,113 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "firstName",length = 100)
-    private String fisrtname;
+    @Column(name = "first_name",length = 100)
+    private String firstname;
 
-    @Column(name = "lastName",length = 100)
+    @Column(name = "last_name",length = 100)
     private String lastname;
 
-    @Column(name = "fiscalCode",length = 100)
+    @Column(name = "fiscal_code",length = 100)
     private String fiscalCode;
 
-    @Column(name = "emailAddress",length = 100, nullable = false)
+    @Column(name = "email_address",length = 100, nullable = false)
     private String emailAddress;
 
-    @Column(name = "phoneNumber",length = 20)
+    @Column(name = "phone_number",length = 20)
     private String phoneNumber;
 
-    @Column(name = "roleId")
-    private Integer role_id;
+    @Column(name = "role_id")
+    private Integer roleId;
 
     @Column(name = "status", nullable = false)
     private boolean status;
 
-    @Column(name = "privacyConsent")
+    @Column(name = "privacy_consent")
     private boolean privacyConsent;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "roleId",insertable = false, updatable = false)
+    @JoinColumn(name = "role_id",insertable = false, updatable = false)
     private Role role;
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getFiscalCode() {
+        return fiscalCode;
+    }
+
+    public void setFiscalCode(String fiscalCode) {
+        this.fiscalCode = fiscalCode;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public boolean isPrivacyConsent() {
+        return privacyConsent;
+    }
+
+    public void setPrivacyConsent(boolean privacyConsent) {
+        this.privacyConsent = privacyConsent;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }
 
 

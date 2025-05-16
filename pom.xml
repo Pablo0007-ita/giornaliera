@@ -68,11 +68,11 @@
 					<components>
 						<component>
 							<name>hbm2java</name>
-							<outputDirectory>${project.basedir}/src/main/java/org.cospessardegna.Giornaliera.entities</outputDirectory>
+							<outputDirectory>${project.basedir}/src/main/java/org.cospessardegna.giornaliera.entities</outputDirectory>
 						</component>
 					</components>
 					<componentProperties>
-						<package>org.cospessardegna.Giornaliera</package>
+						<package>org.cospessardegna.giornaliera</package>
 						<revengfile>${project.basedir}/src/main/resources/hibernate.reveng.xml</revengfile>
 						<detectManyToMany>true</detectManyToMany>
 						<detectOneToOne>true</detectOneToOne>

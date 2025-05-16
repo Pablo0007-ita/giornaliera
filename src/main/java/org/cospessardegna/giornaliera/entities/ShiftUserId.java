@@ -6,15 +6,15 @@ import java.util.Objects;
 
 public class ShiftUserId implements Serializable {
 
-    private Integer shift;
-    private Integer user;
+    private Integer shiftId;
+    private Integer userId;
 
     public ShiftUserId() {
     }
 
     public ShiftUserId(Integer shift, Integer user) {
-        this.shift = shift;
-        this.user =user;
+        this.shiftId = shift;
+        this.userId =user;
 
     }
 
@@ -25,12 +25,12 @@ public class ShiftUserId implements Serializable {
 
         ShiftUserId that = (ShiftUserId) o;
 
-        return Objects.equals(shift, that.shift)
-                && Objects.equals(user, that.user);
+        return Objects.equals(shiftId, that.shiftId)
+                && Objects.equals(userId, that.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(shift, user);
+        return Objects.hash(shiftId, userId);
     }
 }

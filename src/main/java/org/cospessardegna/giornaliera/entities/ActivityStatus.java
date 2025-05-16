@@ -6,11 +6,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "activityStatus")
+@Table(name = "activity_status")
 public class ActivityStatus {
 
     @Id
-    @Column(name = "statId")
+    @Column(name = "stat_id")
     private Integer id;
 
     @Column(name = "description", length = 100)

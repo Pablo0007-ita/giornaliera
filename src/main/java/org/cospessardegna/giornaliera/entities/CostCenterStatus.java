@@ -6,11 +6,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "costCenterStatus")
+@Table(name = "cost_center_status")
 public class CostCenterStatus {
 
     @Id
-    @Column(name = "statusId")
+    @Column(name = "status_id")
     private Integer id;
 
     @Column(name = "description", length = 100)

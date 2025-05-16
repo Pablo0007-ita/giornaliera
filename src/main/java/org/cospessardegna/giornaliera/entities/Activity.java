@@ -11,39 +11,40 @@ public class Activity {
 
 
     @Id
+    @Column(name= "id")
     @GeneratedValue(strategy  = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "descriptiom", nullable = false, length = 100)
+    @Column(name = "description", nullable = false, length = 100)
     private String description;
 
-    @Column(name = "dateTimeStart", nullable = false)
+    @Column(name = "date_time_start", nullable = false)
     private LocalDateTime dateTimeStart;
 
-    @Column(name = "dateTimeEnd", nullable = false)
+    @Column(name = "date_time_end", nullable = false)
     private LocalDateTime dateTimeEnd;
 
-    @Column(name = "typeId")
+    @Column(name = "type_id")
     private Integer typeId;
 
-    @Column(name = "costCenterId")
+    @Column(name = "cost_center_id")
     private Integer costCenterId;
 
 
 
-    @Column(name = "readOnly")
+    @Column(name = "read_only")
     private Boolean readOnly;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "costCenterId", insertable=false, updatable=false)
+    @JoinColumn(name = "cost_center_id", insertable=false, updatable=false)
     private CostCenter costCenter;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "typeId",  insertable=false, updatable=false)
+    @JoinColumn(name = "type_id",  insertable=false, updatable=false)
     private ActivityType type;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "statusId",  insertable=false, updatable=false)
+    @JoinColumn(name = "status_id",  insertable=false, updatable=false)
     private ActivityStatus status;
 }
 

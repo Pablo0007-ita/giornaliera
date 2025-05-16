@@ -7,16 +7,16 @@ import java.util.Objects;
 public class AuthorizationRoleid implements Serializable {
 
     private Integer roleId;
-    private Integer appEntity;
-    private Integer permission;
+    private Integer appEntityId;
+    private Integer permissionId;
 
     public AuthorizationRoleid() {
     }
 
     public AuthorizationRoleid(Integer roleId, Integer appEntity, Integer permission) {
         this.roleId = roleId;
-        this.appEntity = appEntity;
-        this.permission = permission;
+        this.appEntityId = appEntity;
+        this.permissionId= permission;
     }
 
     @Override
@@ -27,12 +27,12 @@ public class AuthorizationRoleid implements Serializable {
         AuthorizationRoleid that = (AuthorizationRoleid) o;
 
         return Objects.equals(roleId, that.roleId)
-                && Objects.equals(appEntity, that.appEntity)
-                && Objects.equals(permission, that.permission);
+                && Objects.equals(appEntityId, that.appEntityId)
+                && Objects.equals(permissionId, that.permissionId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(roleId, appEntity, permission);
+        return Objects.hash(roleId, appEntityId, permissionId);
     }
 }

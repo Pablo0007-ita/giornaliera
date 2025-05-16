@@ -17,14 +17,14 @@ public class Clocking {
     @Column(name = "direction", nullable = false)
     private Character direction;
 
-    @Column(name = "clockingTime",nullable = false)
+    @Column(name = "clocking_time",nullable = false)
     private LocalDateTime clockingTime;
 
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private Integer userId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
     private User user;
 }
 

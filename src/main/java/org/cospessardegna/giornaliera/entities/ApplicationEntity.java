@@ -6,10 +6,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "appEntity")
+@Table(name = "app_entity")
 public class ApplicationEntity {
     @Id
-    @Column(name = "appId")
+    @Column(name = "app_id")
     private Integer id;
 
     @Column(name = "description", length = 100)
