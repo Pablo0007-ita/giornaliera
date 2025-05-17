@@ -13,7 +13,7 @@ public class CostCenter {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "cost_center_name",length = 100,nullable = false)
+    @Column(name = "name",length = 100,nullable = false)
     private String costCenterName;
 
     @Column(name = "description",length = 100)
@@ -25,8 +25,8 @@ public class CostCenter {
     @Column(name = "max_hours")
     private Integer maxHours;
 
-    @Column(name = "max_budg")
-    private Float maxBudg;
+    @Column(name = "max_budget")
+    private Float maxBudget;
 
     @Column(name = "expiration_date")
     private Date expirationDate;
@@ -78,12 +78,12 @@ public class CostCenter {
         this.maxHours = maxHours;
     }
 
-    public Float getMaxBudg() {
-        return maxBudg;
+    public Float getMaxBudget() {
+        return maxBudget;
     }
 
-    public void setMaxBudg(Float maxBudg) {
-        this.maxBudg = maxBudg;
+    public void setMaxBudget(Float maxBudget) {
+        this.maxBudget = maxBudget;
     }
 
     public Date getExpirationDate() {

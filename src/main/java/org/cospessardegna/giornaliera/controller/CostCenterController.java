@@ -20,16 +20,16 @@ public class CostCenterController {
     public List<CostCenter> getAll(){
         return costCenterService.findAll();
     }
+
     @GetMapping("/{id}")
     public CostCenter getById(@PathVariable Integer id){
         return costCenterService.findById(id).orElseThrow();}
-    @PostMapping
-    public CostCenter create(@RequestBody CostCenter user){
-        CostCenter tmp= user;
-        System.out.println(""+tmp);
 
-        return costCenterService.save(user);
+    @PostMapping
+    public CostCenter create(@RequestBody CostCenter costCenter){
+        return costCenterService.save(costCenter);
     }
+
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Integer id){
         costCenterService.deleteById(id);

@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class CostCenterStatus {
 
     @Id
-    @Column(name = "status_id")
+    @Column(name = "id")
     private Integer id;
 
     @Column(name = "description", length = 100)
